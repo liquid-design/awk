@@ -1,0 +1,27 @@
+# The general syntax of awk is:
+awk 'script' filename
+
+# The 'script' is in the form '/pattern/ action' where pattern
+awk '/patern/ action' filename
+
+# example to display the local hosts
+awk '// {print}' /etc/hosts
+
+# with normal string filtering
+awk '/loc/ {print}' /etc/hosts
+
+# with regex stuff
+awk '/l.c/ {print}' /etc/hosts
+
+# The wildcard (*) returns the longest set possible
+awk '/l*c/ {print}' /etc/hosts
+
+# Understand characters with awk:
+
+# [0-9] means a single number
+# [a-z] means match a single lower case letter
+# [A-Z] means match a single upper case letter
+# [a-zA-Z] means match a single letter
+# [a-zA-Z 0-9] means match a single letter or number
+
+
