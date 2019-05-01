@@ -1,0 +1,31 @@
+# in Awk ($) it is used only when accessing the contents of a field but not for accessing the value of variables
+
+# only print Unit_Price of each item on the shopping list
+awk '//{print $2, $3 }' my_shopping.txt
+
+# Pretty printing with printf
+awk '//{printf "%-10s %s\n", $2, $3 }' my_shopping.txt
+
+# Constructing a multi argument awk
+# pay attention to the ;
+awk '' file 
+awk '/pattern/ {print} ' file
+awk '/pattern/ {print ;} /pattern/ {print ;} ' file
+
+# The general syntax for using comparison operators in Awk is:
+# expression { actions; }
+
+awk '$3<=10{printf "%s\t%s\n",$0,"**";}$3>10{print $0;} ' food_prices.list
+awk '$3=10 {printf "%s\t%s\n",$0,"TRUE";}$3>10{print $0;}' food_prices.list
+
+# compound expressions are built using the && referred to as (and) and the || referred to as (or) compound operators.
+
+# AND
+( first_expression ) && ( second_expression )
+
+# OR
+( first_expression ) || ( second_expression )
+
+
+
+
