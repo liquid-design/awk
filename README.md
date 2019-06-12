@@ -12,16 +12,27 @@ http://www.grymoire.com/Unix/Awk.html
 # There are only a few commands in AWK. The list and syntax follows:
 
 if ( conditional ) statement [ else statement ]
+
 while ( conditional ) statement
+
 for ( expression ; conditional ; expression ) statement
+
 for ( variable in array ) statement
+
 break
+
 continue
+
 { [ statement ] ...}
+
 variable=expression
+
 print [ expression-list ] [ > expression ]
+
 printf format [ , expression-list ] [ > expression ]
+
 next 
+
 exit
 
 
